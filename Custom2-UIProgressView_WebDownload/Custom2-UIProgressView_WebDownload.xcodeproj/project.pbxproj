@@ -12,6 +12,8 @@
 		182F8C7D1F7F9A50005D6980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182F8C7B1F7F9A50005D6980 /* Main.storyboard */; };
 		182F8C7F1F7F9A50005D6980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182F8C7E1F7F9A50005D6980 /* Assets.xcassets */; };
 		182F8C821F7F9A50005D6980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182F8C801F7F9A50005D6980 /* LaunchScreen.storyboard */; };
+		18EB62BB1F80EC0700D88688 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB62BA1F80EC0700D88688 /* Reachability.swift */; };
+		18EB62BD1F80F18A00D88688 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB62BC1F80F18A00D88688 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		182F8C7E1F7F9A50005D6980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182F8C811F7F9A50005D6980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182F8C831F7F9A50005D6980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EB62BA1F80EC0700D88688 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		18EB62BC1F80F18A00D88688 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				182F8C7E1F7F9A50005D6980 /* Assets.xcassets */,
 				182F8C801F7F9A50005D6980 /* LaunchScreen.storyboard */,
 				182F8C831F7F9A50005D6980 /* Info.plist */,
+				18EB62BA1F80EC0700D88688 /* Reachability.swift */,
+				18EB62BC1F80F18A00D88688 /* Errors.swift */,
 			);
 			path = "Custom2-UIProgressView_WebDownload";
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EB62BD1F80F18A00D88688 /* Errors.swift in Sources */,
 				182F8C7A1F7F9A50005D6980 /* ViewController.swift in Sources */,
 				182F8C781F7F9A50005D6980 /* AppDelegate.swift in Sources */,
+				18EB62BB1F80EC0700D88688 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
