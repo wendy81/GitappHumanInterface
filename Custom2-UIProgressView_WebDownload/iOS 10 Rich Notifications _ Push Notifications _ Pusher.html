@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://pusher.com/docs/push_notifications/ios/ios10 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>iOS 10 Rich Notifications | Push Notifications | Pusher</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="dns-prefetch" href="https://d2cy1obokpvee9.cloudfront.net/">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://d2cy1obokpvee9.cloudfront.net/manifest/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="https://d2cy1obokpvee9.cloudfront.net/manifest/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="https://d2cy1obokpvee9.cloudfront.net/manifest/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://d2cy1obokpvee9.cloudfront.net/manifest/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://d2cy1obokpvee9.cloudfront.net/manifest/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://d2cy1obokpvee9.cloudfront.net/manifest/favicon-128.png" sizes="128x128">
+  <meta name="application-name" content="Pusher | Leader In Realtime Technologies">
+  <meta name="msapplication-TileColor" content="#549EFF">
+  <meta name="msapplication-TileImage" content="https://d2cy1obokpvee9.cloudfront.net/manifest/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="https://d2cy1obokpvee9.cloudfront.net/manifest/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="https://d2cy1obokpvee9.cloudfront.net/manifest/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="https://d2cy1obokpvee9.cloudfront.net/manifest/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="https://d2cy1obokpvee9.cloudfront.net/manifest/mstile-310x310.png">
+
+  <link rel="stylesheet" media="all" href="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/legacy-7397507bff463f78176bc9f58caf36d80798aa010cb25265a73e01ce04500693.css">
+
+  <script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/linkid.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/u8ypk5pdkarw.js"></script><script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/identity.js" async=""></script><script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/602615083201368" async=""></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/fbevents.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/conversion_async.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/fs.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/uwt.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/gtm.js"></script><script type="text/javascript" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/analytics.js"></script><script type="text/javascript" id="analytics-js" async="" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/analytics.min.js"></script><script type="text/javascript" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/pusher.min.js"></script>
+  <!-- algolia search-->
+  <link rel="stylesheet" href="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/docsearch.min.css">
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/8690271416.js"></script><iframe src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/a8690271416.html" hidden="" aria-hidden="true" tabindex="-1"></iframe>
+
+<script>
+  window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9";
+  window.analytics.load("qxc7FKqY7l22t25UgWru81Q7sDwLx04G");
+</script>
+
+<script>
+  var COOKIE_DOMAIN = '.pusher.com';
+  var cookieHandler = (function() {
+    return {
+      getCookies: function() {
+        $COOKIE = (document.cookie || '').split(/;\s*/).reduce(function(re, c) {
+          var tmp = c.match(/([^=]+)=(.*)/);
+          if (tmp) { re[tmp[1]] = unescape(tmp[2]); }
+          return re;
+        }, {});
+      },
+      deleteCookie: function(name) {
+        document.cookie = name + "=deleted; expires=" + new Date(0).toUTCString() + "; domain=" + COOKIE_DOMAIN + "; path=/";
+      },
+      setCookie: function(name, value) {
+        var d = new Date();
+        d.setTime(d.getTime()+(365*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = name + "=" + value + "; " + expires + "; domain=" + COOKIE_DOMAIN + "; path=/";
+      },
+      randString: function() {
+        var textArr = [];
+        var possible = "abcdefghijklmnopqrstuvwxyz0123456789-";
+        for( var i=0; i < 37; i++ ) {
+          textArr.push(possible.charAt(Math.floor(Math.random() * possible.length)));
+        }
+        return textArr.join("");
+      }
+    };
+  })();
+
+  var $COOKIE = '';
+  cookieHandler.getCookies();
+  if ($COOKIE['pusher_user_id']) {
+    window.analytics.identify($COOKIE['pusher_user_id']);
+  } else if (!$COOKIE['pusher_anon']) {
+    cookieHandler.setCookie('pusher_anon', cookieHandler.randString());
+    cookieHandler.getCookies();
+    window.analytics.identify($COOKIE['pusher_anon']);
+  } else {
+    // Identify the user if all else fails
+    window.analytics.identify($COOKIE['pusher_anon']);
+  }
+</script>
+
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="v3KuGy7yUiyUAJVkRCgZJls8oJG6HdcaUyWf9qIWQORUc26XpEHXgogTJf49BjYk58dJY8Mmd6zS1RuhGZjyXw==">
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+<body id="home-push_notifications_ios_ios10" class="home">
+  <div class="pusher-header  " role="navigation">
+  <div class="grid">
+    <div class="grid__small-12 grid__large-3 grid__columns">
+      <div class="pusher-header__brand">
+        <a href="https://pusher.com/">
+          <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<svg aria-hidden="true" class="svg-pusher-logo" width="90" height="40" role="img" version="1.1" viewBox="0 0 120 37">
+  <path d="M23.4196429,3.26418269 C19.8125,1.53870192 16.1607143,3.63774038 14.2410714,6.06586538 C13.0714286,7.64903846 12.4196429,10.3084135 12.5089286,14.0884615 C12.2767857,19.4961538 14.7053571,27.4742788 14.7053571,27.4742788 L19.6696429,26.1668269 L16.9553571,33.0242788 L18.1696429,33.8603365 L22.7589286,22.7603365 L18.5446429,23.9254808 C18.5446429,23.9254808 16.3482143,19.1670673 17.1875,12.7365385 C17.5625,8.44951923 19.7589286,6.02139423 21.9196429,6.43942308 C24.1160714,7.08870192 25.0535714,10.7264423 23.0892857,13.4836538 C21.125,16.2319712 17.9375,17.4949519 17.9375,17.4949519 L18.125,19.1759615 C18.125,19.1759615 27.9553571,15.9117788 27.3035714,7.98701923 C27.0714286,6.15480769 25.7142857,4.29591346 23.4196429,3.26418269 L23.4196429,3.26418269 Z M7.97321429,29.1997596 C7.97321429,29.1997596 5.21428571,21.8353365 5.02678571,14.6932692 C4.83928571,12.4074519 4.69642857,5.0875 7.50892857,3.82451923 C8.02678571,2.98846154 8.82142857,2.37475962 8.82142857,2.37475962 C8.82142857,2.37475962 1.70535714,1.81442308 2.08035714,14.8266827 C2.78571429,23.5430288 4.51785714,27.5543269 4.51785714,27.5543269 L0.0714285714,28.7639423 L7.27678571,34.3584135 L7.79464286,33.1487981 L3.91071429,30.3026442 L7.97321429,29.1997596 L7.97321429,29.1997596 Z M14.0982143,28.4971154 C10.4017857,15.7694712 11.1964286,9.33004808 12.9732143,5.50552885 C14.9821429,1.21850962 17.8392857,2.38365385 17.8392857,2.38365385 C17.8392857,2.38365385 18.9642857,1.92115385 20.2232143,1.92115385 C20.3125,1.503125 15.2589286,-2.13461538 10.0178571,2.01009615 C1.63392857,9.28557692 9.08035714,29.7600962 9.08035714,29.7600962 L5.75892857,30.6495192 L14.1875,36.9466346 L18.3571429,27.2963942 L14.0982143,28.4971154 L14.0982143,28.4971154 Z M17.9910714,12.3629808 L17.8035714,13.9995192 C17.8035714,13.9995192 22.4375,11.6247596 21.4553571,7.09759615 C20.9375,7.14206731 19.8125,7.746875 19.6339286,7.93365385 C20.0446429,11.0555288 17.9910714,12.3629808 17.9910714,12.3629808 L17.9910714,12.3629808 Z M116.4375,20.2432697 C118.875,19.407212 119.991072,17.3971158 119.991072,14.8800485 C119.991072,13.2435101 119.473214,11.6158659 118.258929,10.4507216 C116.946429,9.14326969 115.026786,8.91201969 113.294643,8.91201969 L107.491072,8.91201969 L107.491072,27.5632216 L110.205357,27.5632216 L110.205357,18.9358178 L110.25,18.9358178 L116.428572,27.5632216 L119.848214,27.5632216 L114.607143,20.6168274 C115.223214,20.6168274 115.875,20.4745197 116.4375,20.2432697 L116.4375,20.2432697 Z M110.214286,18.5622601 L110.214286,11.429087 L113.116072,11.429087 C115.267857,11.429087 117.285714,12.5497601 117.285714,14.9245197 C117.285714,17.9129812 114.571429,18.5622601 112.133929,18.5622601 L110.214286,18.5622601 L110.214286,18.5622601 Z M94.0625001,27.5632216 L104.125,27.5632216 L104.125,25.0461543 L96.7767859,25.0461543 L96.7767859,19.3983178 L104.125,19.3983178 L104.125,16.8812505 L96.7767859,16.8812505 L96.7767859,11.429087 L104.125,11.429087 L104.125,8.91201969 L94.0625001,8.91201969 L94.0625001,27.5632216 L94.0625001,27.5632216 Z M87.5089287,16.979087 L79.7857144,16.979087 L79.7857144,8.91201969 L77.0714287,8.91201969 L77.0714287,27.5632216 L79.7857144,27.5632216 L79.7857144,19.4516832 L87.5089287,19.4516832 L87.5089287,27.5632216 L90.2232144,27.5632216 L90.2232144,8.91201969 L87.5089287,8.91201969 L87.5089287,16.979087 L87.5089287,16.979087 Z M65.9732144,13.6170678 C65.9732144,12.2651447 67.0982144,11.0555293 68.4553573,11.0555293 C70.0982144,11.0555293 71.0803573,12.1317312 71.0803573,13.7593755 L73.794643,13.7593755 C73.794643,10.5841351 71.544643,8.58293315 68.4553573,8.58293315 C65.5982144,8.58293315 63.2142859,10.7264428 63.2142859,13.6704332 C63.2142859,17.3081735 65.5535716,18.1442312 68.4553573,19.2649043 C70.0000001,19.869712 71.4553573,20.3411062 71.4553573,22.297837 C71.4553573,24.1122601 70.3303573,25.4730774 68.4553573,25.4730774 C66.4910716,25.4730774 65.4107144,23.9343755 65.4107144,22.1110582 L62.6964287,22.1110582 C62.6964287,25.4730774 65.0357144,27.9901447 68.4553573,27.9901447 C71.7767859,27.9901447 74.2142859,25.7043274 74.2142859,22.3512024 C74.2142859,15.2091351 65.9732144,17.5838947 65.9732144,13.6170678 L65.9732144,13.6170678 Z M57.357143,21.4528851 C57.357143,23.6942312 56.1428573,25.419712 53.8035716,25.419712 C51.4642859,25.419712 50.2500001,23.6942312 50.2500001,21.4528851 L50.2500001,8.91201969 L47.5357144,8.91201969 L47.5357144,21.5507216 C47.5357144,23.3651447 48.0535716,25.0906255 49.4553573,26.3536062 C50.6250001,27.4298082 52.2142859,27.9367793 53.8125001,27.9367793 C55.4017859,27.9367793 57.0000001,27.4209139 58.169643,26.3536062 C59.5714287,25.1439908 60.0892859,23.3651447 60.0892859,21.5507216 L60.0892859,8.91201969 L57.3750001,8.91201969 L57.3750001,21.4528851 L57.357143,21.4528851 L57.357143,21.4528851 Z M38.3035716,8.91201969 L32.8750001,8.91201969 L32.8750001,27.5632216 L35.5892859,27.5632216 L35.5892859,20.1987985 L38.2589287,20.1987985 C41.9553573,20.1987985 44.857143,18.5177889 44.857143,14.5598562 C44.9107144,10.5841351 42.0000001,8.91201969 38.3035716,8.91201969 L38.3035716,8.91201969 Z M38.3035716,17.7262024 L35.6339287,17.7262024 L35.6339287,11.429087 L38.3035716,11.429087 C40.3660716,11.429087 42.1875001,12.2651447 42.1875001,14.6043274 C42.1875001,16.9346159 40.3660716,17.7262024 38.3035716,17.7262024 L38.3035716,17.7262024 Z" fill="inherit"></path>
+</svg>
+        </a>
+          <a href="https://pusher.com/jobs"><span class="pusher-header__hiring">We're hiring</span></a>
+      </div>
+      <div class="pusher-header__hamburger-icon js-toggle-nav">
+        <svg class="svg-navicon" width="26px" height="14px" viewBox="0 0 26 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon id="bottom" points="0 12 0 14 26 14 26 12"></polygon>
+  <polygon id="middle" points="0 6 0 8 26 8 26 6"></polygon>
+  <polygon id="top" points="26 2 26 0 -2.52840527e-15 0 -2.52840527e-15 2"></polygon>
+</svg>
+      </div>
+    </div>
+    <div class="grid__small-12 grid__large-9 grid__columns">
+      <nav class="pusher-header__nav" role="menubar">
+        <ul>
+          <li class="js-menu-dropdown-trigger show-for-large">
+            <a href="https://pusher.com/features" class="mobile-expand-text">Features</a>
+          </li>
+          <li class="js-menu-dropdown-trigger show-for-large">
+            <a href="https://pusher.com/developers" role="menuitem" class="mobile-expand-text">Developers
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6">
+  <polygon fill="inherit" fill-rule="evenodd" points="5 0 10 4.808 0 4.808" transform="matrix(1 0 0 -1 0 4.808)"></polygon>
+</svg>
+</i>
+            </a>
+            <div class="pusher-header__nav-dropdown js-menu-dropdown">
+              <div class="dropdown-container">
+                <div class="dropdown-container__row">
+                  <div class="dropdown-container__column">
+                    <a href="https://pusher.com/tutorials">
+                      <p class="title--epsilon">Tutorials</p>
+                      <p class="u-mt-2 u-fs-small">Dive right into our quick &amp; easy Pusher tutorials
+                      <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                    </a>
+                  </div>
+                  <div class="dropdown-container__column">
+                    <a href="https://pusher.com/sessions">
+                      <p class="title--epsilon">Sessions</p>
+                      <p class="u-mt-2 u-fs-small">Watch recordings of top-notch talks from developer meetups
+                      <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown-container__row">
+                  <div class="dropdown-container__column">
+                    <a href="https://pusher.com/docs">
+                      <p class="title--epsilon">Documentation</p>
+                      <p class="u-mt-2 u-fs-small">All of the documentation you need in one place
+                      <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                    </a>
+                  </div>
+                  <div class="dropdown-container__column">
+                    <a href="https://pusher.com/docs/libraries">
+                      <p class="title--epsilon">Pusher API Libraries</p>
+                      <p class="u-mt-2 u-fs-small">Over 30 client and server API libraries to help you get started
+                      <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="show-for-large">
+            <a href="https://pusher.com/pricing" role="menuitem">Pricing</a>
+          </li>
+            <li class="js-menu-dropdown-trigger show-for-large">
+              <a role="menuitem" class="mobile-expand-text">Company
+                <i><svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6">
+  <polygon fill="inherit" fill-rule="evenodd" points="5 0 10 4.808 0 4.808" transform="matrix(1 0 0 -1 0 4.808)"></polygon>
+</svg>
+</i>
+              </a>
+              <div class="pusher-header__nav-dropdown pusher-header__nav-dropdown--right js-menu-dropdown">
+                <div class="dropdown-container">
+                  <div class="dropdown-container__row">
+                    <div class="dropdown-container__column">
+                      <a href="https://pusher.com/jobs">
+                        <p class="title--epsilon">Jobs</p>
+                        <p class="u-mt-2 u-fs-small">We’re looking for talented people to join our awesome team
+                        <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                      </a>
+                    </div>
+                    <div class="dropdown-container__column">
+                      <a href="https://pusher.com/team">
+                        <p class="title--epsilon">Meet the Team</p>
+                        <p class="u-mt-2 u-fs-small">Who are the Pusherinos? Find out more about them here
+                        <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="dropdown-container__row">
+                    <div class="dropdown-container__column">
+                      <a href="https://making.pusher.com/">
+                        <p class="title--epsilon">Making Pusher</p>
+                        <p class="u-mt-2 u-fs-small">How do we make Pusher? Find out on our engineering blog
+                        <span style="color: cornflowerblue; margin-top: 6px; display: block">Learn More »</span></p>
+                      </a>
+                    </div>
+                    <div class="dropdown-container__column dropdown-container__column--no-bg">
+                      <p class="title--epsilon">Social</p>
+                      <div class="grid grid--collapse u-mt-2 u-fs-small">
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="http://github.com/pusher">
+                            <i class="icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" fill="inherit"></path>
+</svg></i>Github
+                          </a>
+                        </div>
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="http://twitter.com/pusher">
+                            <i class="icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="inherit"></path>
+</svg></i>Twitter
+                          </a>
+                        </div>
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="https://www.facebook.com/pusherapp">
+                            <i class="icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" fill="inherit"></path>
+</svg></i>Facebook
+                          </a>
+                        </div>
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg">
+                            <i class="icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1280 896q0-37-30-54l-512-320q-31-20-65-2-33 18-33 56v640q0 38 33 56 16 8 31 8 20 0 34-10l512-320q30-17 30-54zm512 0q0 96-1 150t-8.5 136.5-22.5 147.5q-16 73-69 123t-124 58q-222 25-671 25t-671-25q-71-8-124.5-58t-69.5-123q-14-65-21.5-147.5t-8.5-136.5-1-150 1-150 8.5-136.5 22.5-147.5q16-73 69-123t124-58q222-25 671-25t671 25q71 8 124.5 58t69.5 123q14 65 21.5 147.5t8.5 136.5 1 150z" fill="inherit"></path>
+</svg></i>YouTube
+                          </a>
+                        </div>
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="https://www.linkedin.com/company/1990096">
+                            <i class="icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" fill="inherit"></path>
+</svg></i>LinkedIn
+                          </a>
+                        </div>
+                        <div class="grid__small-6 grid__columns">
+                          <a target="_blank" href="https://stories.pusher.com/">
+                            <i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+  <g fill="inherit" fill-rule="evenodd">
+    <path d="M14.1355955,2.20139326 C14.1328989,2.19923596 14.1307416,2.19640449 14.1273708,2.19478652 L14.1225169,2.19235955 L9.86588764,0.0640449438 C9.83716854,0.0496179775 9.80696629,0.0399101124 9.77635955,0.0320898876 C9.73793258,0.022247191 9.69869663,0.0161797753 9.65932584,0.0161797753 C9.49631461,0.0161797753 9.33411236,0.0980224719 9.24620225,0.240674157 L6.79564045,4.22305618 L9.87101124,9.22044944 L14.1486742,2.26934831 C14.1628315,2.2461573 14.1560899,2.21757303 14.1355955,2.20139326"></path>
+    <polyline points="5.446 3.316 5.446 7.849 9.475 9.864 5.446 3.316"></polyline>
+    <path d="M10.0805393 10.166427L13.3972584 11.8247191C13.8288539 12.0405843 14.1787416 11.8894382 14.1787416 11.4873708L14.1787416 3.50683146 10.0805393 10.166427M4.74633708 2.20786517L.589078652.129168539C.513977528.0916853933.442516854.0738876404.377797753.0738876404.195775281.0738876404.0680898876.214786517.0680898876.451146067L.0680898876 9.4268764C.0680898876 9.66714607.243910112 9.95164045.458831461 10.0591011L4.12044944 11.8898427C4.21429213 11.936764 4.30368539 11.9590112 4.38444944 11.9590112 4.61204494 11.9590112 4.77168539 11.7829213 4.77168539 11.4873708L4.77168539 2.2487191C4.77168539 2.23146067 4.7618427 2.21555056 4.74633708 2.20786517"></path>
+  </g>
+</svg>
+</i>Medium
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          <li class="show-for-large">
+            <a href="https://blog.pusher.com/" role="menuitem">Blog</a>
+          </li>
+          <li class="hide-for-large">
+            <a href="https://pusher.com/features">Features</a>
+          </li>
+          <li class="hide-for-large pusher-header__nav--mobile">
+            <ul>
+              <li><a href="https://pusher.com/solutions">Customers</a></li>
+              <li><a href="https://pusher.com/tutorials">Tutorials</a></li>
+              <li><a href="https://pusher.com/pricing">Pricing</a></li>
+              <li><a href="https://pusher.com/docs">Docs</a></li>
+              <li><a href="https://pusher.com/sessions">Sessions</a></li>
+              <li><a href="https://blog.pusher.com/">Blog</a></li>
+              <li><a href="http://support.pusher.com/">Support</a></li>
+              <li><a href="https://pusher.com/team">Team</a></li>
+              <li><a href="https://pusher.com/jobs">Jobs</a></li>
+              <li><a href="https://pusher.com/contact">Contact</a></li>
+            </ul>
+          </li>
+          <li class="pusher-header__nav__logged-in-user js-toggle-user-menu hide-for-medium-only hide-for-small-only">
+            <a role="menuitem">
+              <figure class="user-avatar user-avatar--md">
+                <img src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/de1d986b6b158ec49835d788c4c329d5">
+              </figure>
+            </a>
+            <ul class="pusher-header__nav__subnav">
+              <li>
+                <a href="https://dashboard.pusher.com/" role="menuitem">Visit Dashboard</a>
+              </li>
+              <li>
+                <a href="https://dashboard.pusher.com/accounts/edit" role="menuitem">Account Settings</a>
+              </li>
+              <li>
+                <a href="https://dashboard.pusher.com/force_logout" role="menuitem">Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mobile-links">
+            <a href="https://dashboard.pusher.com/" role="menuitem">Visit Dashboard</a>
+          </li>
+          <li class="mobile-links">
+            <a href="https://dashboard.pusher.com/force_logout" role="menuitem">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+  <div class="page">
+      <section class="section section--no-padding layout--with-aside">
+        <div class="grid">
+          <aside class="layout--with-aside__aside grid__small-12 grid__large-3 grid__large-push-9 grid__columns">
+            
+<h3>Documentation</h3>
+<form class="search-form" action="https://pusher.com/docs/search/" method="get">
+  <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="text" class="search-box docs-sidebar-search ds-input" name="q" placeholder="Search the docs" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: pusher-proxima-nova, Helmet, Freesans, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+</form>
+<nav class="docs-sidebar">
+  <dl>
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Getting started</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/">Understanding Pusher</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/javascript_quick_start">JavaScript quick start</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/ios_quick_start">iOS quick start</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/android_quick_start">Android quick start</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/debugging">Debugging</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/tutorials">How do I...?</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Using Pusher</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide">Client API overview</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_connect">Connection</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_channels">Channels</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_public_channels">Public channels</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_private_channels">Private channels</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_presence_channels">Presence channels</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_events">Events</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/client_api_guide/client_global_configuration">Global configuration</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/fallbacks">WebSocket fallbacks</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/device_compatibility">Device compatibility</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Server API</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/server_api_guide">Server API overview</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/server_api_guide/interact_rest_api">Interacting with our HTTP API</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/server_api_guide/interact_rest_api#publishing-events">Publishing events</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/webhooks">Webhooks</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/authenticating_users">Authenticating users</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/duplicates">Excluding event recipients</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group is-open">
+      <dt class="docs-sidebar__title">Push Notifications <strong><span class="u-color-beta">(BETA)</span></strong></dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications">Push Notifications overview</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/ios">iOS overview</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/ios/apns">Setting up APNs</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/ios/client">Making your iOS client</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/ios/server">Pushing to your iOS client</a></dd></li>
+        <li class="is-selected"><dd><a href="https://pusher.com/docs/push_notifications/ios/ios10">Adding rich content in iOS 10</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android">Android overview</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/gcm">Setting up GCM</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/client_gcm">Making your Android GCM client</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/server_gcm">Pushing to your Android GCM client</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/fcm">Setting up FCM</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/client_fcm">Making your Android FCM client</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/android/server_fcm">Pushing to your Android FCM client</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/reference/architecture">System architecture</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/reference/client_api">Client API</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/push_notifications/reference/server_api">Server API</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Libraries</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/libraries">Pusher API libraries</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Miscellaneous</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/clusters">Clusters</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/integrations">Integrations</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Library author reference</dt>
+      <ul class="docs-sidebar__list">
+        <li class=""><dd><a href="https://pusher.com/docs/auth_signatures">Authentication Signatures</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/rest_api">HTTP API reference</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/pusher_protocol">Pusher WebSocket Protocol</a></dd></li>
+      </ul>
+    </div>
+
+    <div class="docs-sidebar__group">
+      <dt class="docs-sidebar__title">Resources</dt>
+      <ul class="docs-sidebar__list">
+        <li><dd><a href="https://support.pusher.com/">Support Knowledge Base</a></dd></li>
+        <li class=""><dd><a href="https://pusher.com/docs/resources">Other resources on the web</a></dd></li>
+      </ul>
+    </div>
+
+      <div class="docs-sidebar__group">
+        <dt class="docs-sidebar__title">From the Pusher Blog</dt>
+        <ul class="docs-sidebar__list">
+            <li><dd><a href="http://blog.pusher.com/?p=3518" title="How to build a realtime user’s status update in iOS">How to build a realtime user’s status update in iOS</a></dd></li>
+            <li><dd><a href="http://blog.pusher.com/?p=3511" title="How to make your Angular 4 app SEO friendly">How to make your Angular 4 app SEO friendly</a></dd></li>
+            <li><dd><a href="http://blog.pusher.com/?p=3481" title="How to build a photo feed using .NET and Pusher">How to build a photo feed using .NET and Pusher</a></dd></li>
+            <li><dd><a href="http://blog.pusher.com/?p=3459" title="How to build message delivery status in iOS using Pusher">How to build message delivery status in iOS using Pusher</a></dd></li>
+            <li><dd><a href="http://blog.pusher.com/?p=3470" title="REST versus GraphQL">REST versus GraphQL</a></dd></li>
+        </ul>
+      </div>
+
+  </dl>
+</nav>
+
+          </aside>
+          <article class="layout--with-aside__main gutenberg grid__small-12 grid__large-9 grid__large-pull-3 grid__columns grid--end">
+            <div id="main_article">
+              <h1 id="push-notifications-adding-rich-content-in-ios-10" data-magellan-target="push-notifications-adding-rich-content-in-ios-10">Push Notifications: Adding rich content in iOS 10</h1>
+
+<p class="alert alert--beta">Our Push Notifications system is currently in beta. This means you may experience errors, and the APIs may change. We would love to hear your feedback, so please <a href="https://support.pusher.com/hc/en-us" target="_blank">get in touch</a>!</p>
+
+<p class="intro">With iOS 10, you can now send rich media in a Push Notification, including images, GIFs, audio, and video clips.</p>
+
+<p class="alert alert--error">You should already have an iOS app which you would like to configure. For more on setting up an iOS app with Pusher, see <a href="https://pusher.com/docs/ios_quick_start">our iOS Quick Start guide</a>.</p>
+
+<h2 id="sending-rich-notifications-in-ios-10-using-the-native-push-notifications-api"><a href="https://pusher.com/docs/push_notifications/ios/ios10#sending-rich-notifications-in-ios-10-using-the-native-push-notifications-api">Sending rich notifications in iOS 10 using the Native Push Notifications API</a></h2>
+
+<p>Update your version of the <code class="highlighter-rouge">PusherSwift</code> CocoaPod to version <code class="highlighter-rouge">3.0.0</code>.</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#Podfile_swift" data-toggle="tab" data-lang="swift">Swift</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="Podfile_swift"><div data-lang="swift" data-group-id="Podfile" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="pln">pod </span><span class="str">'PusherSwift'</span></code></pre>
+</div></div></div>
+
+<p>Go to your application target and choose <em>Capabilities</em> and ensure that ‘Push Notifications’ is enabled and that ‘Remote notifications’ is selected under <em>Background Modes</em>.</p>
+
+<p>Swift 3 introduces some changes to the methods for registering your applications for remote notifications. The syntax is also a little different in places.</p>
+
+<p>In <code class="highlighter-rouge">AppDelegate.swift</code>, add <code class="highlighter-rouge">import UserNotifications</code> and in the <code class="highlighter-rouge">didFinishLaunchingWithOptions</code> method, use the following code to register for remote notifications, which has been updated in Swift 3:</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#AppDelegateOne_swift" data-toggle="tab" data-lang="swift">Swift</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="AppDelegateOne_swift"><div data-lang="swift" data-group-id="AppDelegateOne" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="kwd">let</span><span class="pln"> center </span><span class="pun">=</span><span class="pln"> </span><span class="typ">UNUserNotificationCenter</span><span class="pun">.</span><span class="pln">current</span><span class="pun">()</span><span class="pln">
+center</span><span class="pun">.</span><span class="pln">requestAuthorization</span><span class="pun">(</span><span class="pln">options</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[.</span><span class="pln">alert</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">sound</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">(</span><span class="pln">granted</span><span class="pun">,</span><span class="pln"> error</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">in</span><span class="pln">
+	</span><span class="com">// actions based on whether notifications were authorized or not</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+application</span><span class="pun">.</span><span class="pln">registerForRemoteNotifications</span><span class="pun">()</span></code></pre>
+</div></div></div>
+
+<p>You’ll also need to replace your code in <code class="highlighter-rouge">didRegisterForRemoteNotificationsWithDeviceToken</code> with:</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#AppDelegateTwo_swift" data-toggle="tab" data-lang="swift">Swift</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="AppDelegateTwo_swift"><div data-lang="swift" data-group-id="AppDelegateTwo" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="pln">pusher</span><span class="pun">.</span><span class="pln">nativePusher</span><span class="pun">().</span><span class="kwd">register</span><span class="pun">(</span><span class="pln">deviceToken</span><span class="pun">:</span><span class="pln"> deviceToken</span><span class="pun">)</span><span class="pln">
+pusher</span><span class="pun">.</span><span class="pln">nativePusher</span><span class="pun">().</span><span class="pln">subscribe</span><span class="pun">(</span><span class="pln">interestName</span><span class="pun">:</span><span class="pln"> </span><span class="str">"donuts"</span><span class="pun">)</span></code></pre>
+</div></div></div>
+
+<h3 id="notification-service-extension"><a href="https://pusher.com/docs/push_notifications/ios/ios10#notification-service-extension">Notification Service Extension</a></h3>
+
+<p>A Notification Service Extension intercepts certain remote notifications and allows your application to handle the contents of the payload, including downloading and displaying remote media attachments, before displaying the notification to the user.</p>
+
+<p>Add a new Notification Service Extension target by going to <code class="highlighter-rouge">File &gt; New &gt; Target</code>.</p>
+
+<p>Open the new <code class="highlighter-rouge">NotificationService.swift</code> file and add the following code to the <code class="highlighter-rouge">didReceiveRequestWithContentHandler</code> method:</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#NotificationServiceOne_swift" data-toggle="tab" data-lang="swift">Swift</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="NotificationServiceOne_swift"><div data-lang="swift" data-group-id="NotificationServiceOne" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="kwd">self</span><span class="pun">.</span><span class="pln">contentHandler </span><span class="pun">=</span><span class="pln"> contentHandler
+bestAttemptContent </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">request</span><span class="pun">.</span><span class="pln">content</span><span class="pun">.</span><span class="pln">mutableCopy</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">as</span><span class="pun">?</span><span class="pln"> </span><span class="typ">UNMutableNotificationContent</span><span class="pun">)</span><span class="pln">
+
+</span><span class="com">// Get the custom data from the notification payload</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">let</span><span class="pln"> notificationData </span><span class="pun">=</span><span class="pln"> request</span><span class="pun">.</span><span class="pln">content</span><span class="pun">.</span><span class="pln">userInfo</span><span class="pun">[</span><span class="str">"data"</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pun">?</span><span class="pln"> </span><span class="pun">[</span><span class="typ">String</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pun">]</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Grab the attachment</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">let</span><span class="pln"> urlString </span><span class="pun">=</span><span class="pln"> notificationData</span><span class="pun">[</span><span class="str">"attachment-url"</span><span class="pun">],</span><span class="pln"> </span><span class="kwd">let</span><span class="pln"> fileUrl </span><span class="pun">=</span><span class="pln"> URL</span><span class="pun">(</span><span class="kwd">string</span><span class="pun">:</span><span class="pln"> urlString</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Download the attachment</span><span class="pln">
+        </span><span class="typ">URLSession</span><span class="pun">.</span><span class="pln">shared</span><span class="pun">.</span><span class="pln">downloadTask</span><span class="pun">(</span><span class="kwd">with</span><span class="pun">:</span><span class="pln"> fileUrl</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">(</span><span class="pln">location</span><span class="pun">,</span><span class="pln"> response</span><span class="pun">,</span><span class="pln"> error</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">in</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">let</span><span class="pln"> location </span><span class="pun">=</span><span class="pln"> location </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Move temporary file to remove .tmp extension</span><span class="pln">
+                </span><span class="kwd">let</span><span class="pln"> tmpDirectory </span><span class="pun">=</span><span class="pln"> </span><span class="typ">NSTemporaryDirectory</span><span class="pun">()</span><span class="pln">
+                </span><span class="kwd">let</span><span class="pln"> tmpFile </span><span class="pun">=</span><span class="pln"> </span><span class="str">"file://"</span><span class="pun">.</span><span class="pln">appending</span><span class="pun">(</span><span class="pln">tmpDirectory</span><span class="pun">).</span><span class="pln">appending</span><span class="pun">(</span><span class="pln">fileUrl</span><span class="pun">.</span><span class="pln">lastPathComponent</span><span class="pun">)</span><span class="pln">
+                </span><span class="kwd">let</span><span class="pln"> tmpUrl </span><span class="pun">=</span><span class="pln"> URL</span><span class="pun">(</span><span class="kwd">string</span><span class="pun">:</span><span class="pln"> tmpFile</span><span class="pun">)!</span><span class="pln">
+                </span><span class="kwd">try</span><span class="pun">!</span><span class="pln"> </span><span class="typ">FileManager</span><span class="pun">.</span><span class="kwd">default</span><span class="pun">.</span><span class="pln">moveItem</span><span class="pun">(</span><span class="pln">at</span><span class="pun">:</span><span class="pln"> location</span><span class="pun">,</span><span class="pln"> to</span><span class="pun">:</span><span class="pln"> tmpUrl</span><span class="pun">)</span><span class="pln">
+
+                </span><span class="com">// Add the attachment to the notification content</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pln"> </span><span class="kwd">let</span><span class="pln"> attachment </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">try</span><span class="pun">?</span><span class="pln"> </span><span class="typ">UNNotificationAttachment</span><span class="pun">(</span><span class="pln">identifier</span><span class="pun">:</span><span class="pln"> </span><span class="str">""</span><span class="pun">,</span><span class="pln"> url</span><span class="pun">:</span><span class="pln"> tmpUrl</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                    </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">bestAttemptContent</span><span class="pun">?.</span><span class="pln">attachments </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">attachment</span><span class="pun">]</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="com">// Serve the notification content</span><span class="pln">
+            </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">contentHandler</span><span class="pun">!(</span><span class="kwd">self</span><span class="pun">.</span><span class="pln">bestAttemptContent</span><span class="pun">!)</span><span class="pln">
+            </span><span class="pun">}.</span><span class="pln">resume</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+</div></div></div>
+
+<p>In this code, we are exploring the notification’s payload for the dictionary named <code class="highlighter-rouge">data</code> that contains the key <code class="highlighter-rouge">attachment-url</code>. If this key exists, we download the media at the URL specified in the key’s value.</p>
+
+<p>The <code class="highlighter-rouge">URLSession</code> downloads the media to temporary storage and appends a <code class="highlighter-rouge">.tmp</code> file extension, which needs to be removed so that the application can infer the file type and display it. This is done by moving the temporary file to the device’s File Manager.</p>
+
+<h3 id="apns-payload"><a href="https://pusher.com/docs/push_notifications/ios/ios10#apns-payload">APNs Payload</a></h3>
+
+<p>You’ll need to make a couple of adjustments to the server that triggers Push Notifications to your application.</p>
+
+<p>Your APNs payload tells iOS which notifications will be intercepted by the Notification Service Extension by using the new <code class="highlighter-rouge">mutable-content</code> key, which takes the value <code class="highlighter-rouge">1</code> to enable it.</p>
+
+<p>You then need to include whatever media attachment you choose to use in the payload by including it in its own dictionary that we’ve named <code class="highlighter-rouge">data</code>, but you can name anything. Add a key-value pair to the dictionary, ensuring that the key you’ve used in your Notification Service Extension is the same as the key here.</p>
+
+<p>The following example is using a Node JS server:</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#NodeServerOne_node" data-toggle="tab" data-lang="node">Node.js</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="NodeServerOne_node"><div data-lang="node" data-group-id="NodeServerOne" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="pln">pusher</span><span class="pun">.</span><span class="pln">notify</span><span class="pun">([</span><span class="str">'donuts'</span><span class="pun">],</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  apns</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    aps</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      alert</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        title</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Pusher's Native Push Notifications API"</span><span class="pun">,</span><span class="pln">
+        subtitle</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bringing you iOS 10 support!"</span><span class="pun">,</span><span class="pln">
+        body</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Now add more content to your Push Notifications!"</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="str">"mutable-content"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+        category</span><span class="pun">:</span><span class="pln"> </span><span class="str">"pusher"</span><span class="pln">
+      </span><span class="pun">},</span><span class="pln">
+    data</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"attachment-url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://pusher.com/static_logos/320x320.png"</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+</div></div></div>
+
+<p>You will now be able to send images, videos, audio, and GIFs in your iOS 10 Push Notifications! Change the URL to point to another media file when required.</p>
+
+<p>You can remove the media attachment and send text only.</p>
+
+<h2 id="how-do-i-add-a-custom-ui-to-my-notifications-in-ios-10"><a href="https://pusher.com/docs/push_notifications/ios/ios10#how-do-i-add-a-custom-ui-to-my-notifications-in-ios-10">How do I add a custom UI to my notifications in iOS 10?</a></h2>
+
+<p>You can also design your own views within your push notifications using Notification <em>Content</em> Extensions. These are used to draw your own UI to display when your application receives certain notifications.</p>
+
+<p>Add a new Notification Content Extension target by going to <code class="highlighter-rouge">File &gt; New &gt; Target</code>.</p>
+
+<p>The Content Extension uses a <code class="highlighter-rouge">NotificationViewController</code>, which is a subclass of <code class="highlighter-rouge">UIViewController</code>.</p>
+
+<p>When you created the Content Extension, Xcode created the <code class="highlighter-rouge">NotificationViewController.swift</code> file, a <code class="highlighter-rouge">MainInterface.storyboard</code> file and an <code class="highlighter-rouge">Info.plist</code> file.</p>
+
+<p>Expand the <code class="highlighter-rouge">NSExtension</code> and <code class="highlighter-rouge">NSExtensionAttributes</code> dictionaries in the <code class="highlighter-rouge">Info.plist</code> file.</p>
+
+<p>The <code class="highlighter-rouge">UNNotificationExtensionCategory</code> key value is the same as the value set in the Node JS server example above. This tells iOS that the push notification you’re triggering is of a certain category, and should be handled in a certain way. In this case, with a Content Extension. Make sure this matches the category set in the push notification payload.</p>
+
+<p>The key <code class="highlighter-rouge">UNNotificationExtensionInitialContentSizeRatio</code> relates to the size of the view that is displayed when your push notification is expanded. By default, this is <code class="highlighter-rouge">1</code>. You should experiment with this to get the best results for your UI.</p>
+
+<p>Add the 3rd key <code class="highlighter-rouge">UNNotificationExtensionDefaultContentHidden</code>. This key is a boolean, and either hides or displays the push notification’s alert text.</p>
+
+<p>In <code class="highlighter-rouge">MainInterface.storyboard</code>, create the UI that your push notifications will display, just like a regular <code class="highlighter-rouge">UIViewController</code>.</p>
+
+<p>In <code class="highlighter-rouge">NotificationViewController.swift</code>, declare any <code class="highlighter-rouge">IBOutlets</code> and connect them to the Storyboard file.</p>
+
+<p>Assign values to the outlets in the <code class="highlighter-rouge">didReceiveNotification</code> method, like this example:</p>
+
+<ul class="nav nav-tabs"><li class="active"><a href="https://pusher.com/docs/push_notifications/ios/ios10#NotificationViewControllerOne_swift" data-toggle="tab" data-lang="swift">Swift</a></li></ul><div class="tab-content"><div class="tab-pane fade in active" id="NotificationViewControllerOne_swift"><div data-lang="swift" data-group-id="NotificationViewControllerOne" class="highlighter-rouge"><pre class="highlight prettyprint prettyprinted" style=""><code><span class="pln">func didReceive</span><span class="pun">(</span><span class="pln">_ notification</span><span class="pun">:</span><span class="pln"> </span><span class="typ">UNNotification</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    titleLabel</span><span class="pun">?.</span><span class="pln">text </span><span class="pun">=</span><span class="pln"> notification</span><span class="pun">.</span><span class="pln">request</span><span class="pun">.</span><span class="pln">content</span><span class="pun">.</span><span class="pln">title
+    subtitleLabel</span><span class="pun">?.</span><span class="pln">text </span><span class="pun">=</span><span class="pln"> notification</span><span class="pun">.</span><span class="pln">request</span><span class="pun">.</span><span class="pln">content</span><span class="pun">.</span><span class="pln">subtitle
+</span><span class="pun">}</span></code></pre>
+</div></div></div>
+
+<p>Trigger a Push Notification using our API, making sure the <code class="highlighter-rouge">category</code> matches, and you’ll see your custom UI when you expand the push notification.</p>
+
+<p class="alert alert--success"><strong>That’s it! You’re all set up to send and receive rich notifications in iOS 10!</strong> <a href="https://blog.pusher.com/how-to-send-ios-10-notifications-using-the-push-notifications-api/" target="_blank">Here you will find a complete tutorial of rich Push Notifications in iOS 10</a>.</p>
+
+              <p class="alert alert--information">Have you tried <a href="https://pusher.com/docs/search">using the search</a> to find what you’re after? If you still have a question then <a href="https://pusher.com/support">get in touch with us</a> and let us help you out.</p>
+
+            </div>
+          </article>
+        </div>
+      </section>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+  <div class="grid">
+    <div class="grid__small-6 grid__medium-3 grid__large-2 grid__columns">
+      <h4 class="footer__section-title">Company</h4>
+      <ul class="footer__list">
+        <li>
+          <a href="https://pusher.com/team">Meet The Team</a></li>
+        <li>
+          <a href="https://blog.pusher.com/">Blog</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/jobs">Jobs</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/about/press">Brand Assets</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid__small-6 grid__medium-3 grid__large-2 grid__columns">
+      <h4 class="footer__section-title">Product</h4>
+      <ul class="footer__list">
+        <li>
+          <a href="https://pusher.com/pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/features">Features</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/docs/javascript_quick_start">Getting Started</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/tutorials">Tutorials</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/docs">Documentation</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/docs/libraries">Pusher API Libraries</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/contact">Schedule a Demo</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid__small-6 grid__medium-3 grid__large-2 grid__columns">
+      <h4 class="footer__section-title">Support</h4>
+      <ul class="footer__list">
+        <li>
+          <a href="http://support.pusher.com/">Support Centre &amp; FAQ</a>
+        </li>
+        <li>
+          <a href="http://status.pusher.com/">Uptime &amp; Status</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/security">Security</a>
+        </li>
+        <li>
+          <a href="https://pusher.com/legal">Terms &amp; Conditions</a>
+        </li>
+      </ul>
+    </div>
+    <div class="grid__small-6 grid__medium-3 grid__large-2 grid__columns">
+      <h4 class="footer__section-title">Connect</h4>
+      <ul class="footer__list">
+       <li>
+          <a target="_blank" href="http://github.com/pusher">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" fill="inherit"></path>
+</svg></i>Github
+          </a>
+       </li>
+       <li>
+          <a target="_blank" href="http://twitter.com/pusher">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="inherit"></path>
+</svg></i>Twitter
+          </a>
+       </li>
+       <li>
+          <a target="_blank" href="https://www.facebook.com/pusherapp">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" fill="inherit"></path>
+</svg></i>Facebook
+          </a>
+       </li>
+       <li>
+          <a target="_blank" href="https://www.youtube.com/channel/UCoyqucxoFXDFnh3khD0rjUg">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1280 896q0-37-30-54l-512-320q-31-20-65-2-33 18-33 56v640q0 38 33 56 16 8 31 8 20 0 34-10l512-320q30-17 30-54zm512 0q0 96-1 150t-8.5 136.5-22.5 147.5q-16 73-69 123t-124 58q-222 25-671 25t-671-25q-71-8-124.5-58t-69.5-123q-14-65-21.5-147.5t-8.5-136.5-1-150 1-150 8.5-136.5 22.5-147.5q16-73 69-123t124-58q222-25 671-25t671 25q71 8 124.5 58t69.5 123q14 65 21.5 147.5t8.5 136.5 1 150z" fill="inherit"></path>
+</svg></i>YouTube
+          </a>
+       </li>
+       <li>
+          <a target="_blank" href="https://www.linkedin.com/company/1990096">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" fill="inherit"></path>
+</svg></i>LinkedIn
+          </a>
+       </li>
+       <li>
+         <a target="_blank" href="https://stories.pusher.com/">
+           <i class="footer__icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+  <g fill="inherit" fill-rule="evenodd">
+    <path d="M14.1355955,2.20139326 C14.1328989,2.19923596 14.1307416,2.19640449 14.1273708,2.19478652 L14.1225169,2.19235955 L9.86588764,0.0640449438 C9.83716854,0.0496179775 9.80696629,0.0399101124 9.77635955,0.0320898876 C9.73793258,0.022247191 9.69869663,0.0161797753 9.65932584,0.0161797753 C9.49631461,0.0161797753 9.33411236,0.0980224719 9.24620225,0.240674157 L6.79564045,4.22305618 L9.87101124,9.22044944 L14.1486742,2.26934831 C14.1628315,2.2461573 14.1560899,2.21757303 14.1355955,2.20139326"></path>
+    <polyline points="5.446 3.316 5.446 7.849 9.475 9.864 5.446 3.316"></polyline>
+    <path d="M10.0805393 10.166427L13.3972584 11.8247191C13.8288539 12.0405843 14.1787416 11.8894382 14.1787416 11.4873708L14.1787416 3.50683146 10.0805393 10.166427M4.74633708 2.20786517L.589078652.129168539C.513977528.0916853933.442516854.0738876404.377797753.0738876404.195775281.0738876404.0680898876.214786517.0680898876.451146067L.0680898876 9.4268764C.0680898876 9.66714607.243910112 9.95164045.458831461 10.0591011L4.12044944 11.8898427C4.21429213 11.936764 4.30368539 11.9590112 4.38444944 11.9590112 4.61204494 11.9590112 4.77168539 11.7829213 4.77168539 11.4873708L4.77168539 2.2487191C4.77168539 2.23146067 4.7618427 2.21555056 4.74633708 2.20786517"></path>
+  </g>
+</svg>
+</i>Medium
+         </a>
+       </li>
+       <li>
+          <a target="_blank" href="http://twitter.com/pusherstatus">
+            <i class="footer__icon"><svg width="12" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="inherit"></path>
+</svg></i>@pusherstatus
+          </a>
+       </li>
+      </ul>
+    </div>
+
+      <div class="grid__medium-12 grid__large-4 grid__columns">
+        <h4 class="footer__section-title">Latest from the Pusher Blog</h4>
+        <ul class="footer__list">
+            <li><a href="http://blog.pusher.com/?p=3518" title="How to build a realtime user’s status update in iOS">How to build a realtime user’s status update in iOS</a></li>
+            <li><a href="http://blog.pusher.com/?p=3511" title="How to make your Angular 4 app SEO friendly">How to make your Angular 4 app SEO friendly</a></li>
+            <li><a href="http://blog.pusher.com/?p=3481" title="How to build a photo feed using .NET and Pusher">How to build a photo feed using .NET and Pusher</a></li>
+            <li><a href="http://blog.pusher.com/?p=3459" title="How to build message delivery status in iOS using Pusher">How to build message delivery status in iOS using Pusher</a></li>
+            <li><a href="http://blog.pusher.com/?p=3470" title="REST versus GraphQL">REST versus GraphQL</a></li>
+        </ul>
+      </div>
+
+  </div>
+
+  <div class="footer__super">
+    <div class="grid">
+      <div class="grid__small-12 grid__medium-4 grid__large-12 grid__columns">
+        <p><small>© 2017 Pusher Ltd. All rights reserved.</small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/application-378803783beb83e0771aacdaf039ae362fbdbf7b047a2942685689eb8b42a5bd.js"></script>
+  <script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/tracking-49aa26ed24a4ad72e8255004d367260b428685ebdfcdb715651ceca582ace44e.js"></script>
+
+  <script>
+
+    var tutorial_links = document.getElementsByClassName("js-track-tutorial-click");
+    for (var i = 0, l = tutorial_links.length; i < l; i++) {
+      tutorial_links[i].addEventListener('click', function(e) {
+        tut_data = e.target.closest('.panel').getAttribute('data-tutorial');
+        trackTutorialClick(JSON.parse(tut_data));
+      })
+    }
+
+    function trackTutorialClick(tut_data) {
+     var data = {
+        tutorial_title: tut_data.name,
+        tutorial_difficulty: tut_data.difficulty,
+        tutorial_duration: tut_data.duration,
+        tutorial_languages: tut_data.languages,
+        tutorial_external: tut_data.external
+      };
+      analytics.track('Viewed Individual Tutorial Page', data);
+    }
+    Enquire = new PusherEnquireAnalytics(
+      'qxc7FKqY7l22t25UgWru81Q7sDwLx04G',
+      'iOS 10 Rich Notifications | Push Notifications'
+    );
+    Enquire.init();
+  </script>
+
+  <!--algolia search-->
+  <script type="text/javascript" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+  apiKey: '75901ce487b377082ce8171ae77eedbb',
+  indexName: 'pusher',
+  inputSelector: '.docs-sidebar-search',
+  debug: false // Set debug to true if you want to inspect the dropdown
+  });
+  </script>
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/index-prod.html" frameborder="0" style="border: none; display: block; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; width: 0px !important; height: 0px !important; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none; background: none transparent; opacity: 1;"></iframe></div><script src="./iOS 10 Rich Notifications _ Push Notifications _ Pusher_files/adsct" type="text/javascript"></script></body></html>
