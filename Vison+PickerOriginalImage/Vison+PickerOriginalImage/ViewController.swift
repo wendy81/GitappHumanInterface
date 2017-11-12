@@ -33,14 +33,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     //MARK:识别图中文本
     
-//    var gifView:UIImageView = nil
-    
+    //var gifView:UIImageView = nil
     func analyseText(from selectMenu:Bool) -> Promise<String> {
         
         return  Promise { fulfill, reject in
-            
-        let qrcodeImage = CIImage(image: imageView.image!)
-        let handler = VNImageRequestHandler(ciImage:qrcodeImage!, orientation:CGImagePropertyOrientation.up)
+        
+        let image = imageView.image!
+        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+        let handlerImage = CIImage(image: imageView.image!)!
+        let handler = VNImageRequestHandler(ciImage:handlerImage, orientation:orientation)
         let request = VNDetectTextRectanglesRequest(completionHandler: { (request, error) in
             DispatchQueue.main.async {
                 if let result = request.results {
@@ -105,8 +106,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func analyseTag(from selectMenu:Bool) -> Promise<String> {
         
         return  Promise { fulfill, reject in
-        let qrcodeImage = CIImage(image: imageView.image!)
-        let handler = VNImageRequestHandler(ciImage:qrcodeImage!, orientation:CGImagePropertyOrientation.up)
+            
+        let image = imageView.image!
+        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+        let handlerImage = CIImage(image: imageView.image!)!
+        let handler = VNImageRequestHandler(ciImage:handlerImage, orientation:orientation)
         let request = VNDetectBarcodesRequest(completionHandler: { (request, error) in
             DispatchQueue.main.async {
                 if let result = request.results {
@@ -150,9 +154,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func recognizeFace(from selectMenu:Bool) -> Promise<String> {
         
         return  Promise { fulfill, reject in
-            
-        let faceImage = CIImage(image: imageView.image!)
-        let handler = VNImageRequestHandler(ciImage:faceImage!, orientation:CGImagePropertyOrientation.up)
+        
+        let image = imageView.image!
+        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+        let handlerImage = CIImage(image: imageView.image!)!
+        let handler = VNImageRequestHandler(ciImage:handlerImage, orientation:orientation)
         
         let request = VNDetectFaceRectanglesRequest(completionHandler: { (request, error) in
             
@@ -164,6 +170,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     
                     print(self.imageView.image!.size.width)
                     print(self.imageView.image!.size.height)
+                    
                     let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -self.imageView!.frame.size.height)
                     let translate = CGAffineTransform.identity.scaledBy(x: self.imageView!.frame.size.width, y: self.imageView!.frame.size.height)
 
@@ -206,9 +213,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func recognizeFaceandmarks(from selectMenu:Bool) -> Promise<String> {
         
         return  Promise { fulfill, reject in
-            
-        let faceImage = CIImage(image: imageView.image!)
-        let handler = VNImageRequestHandler(ciImage:faceImage!, orientation:CGImagePropertyOrientation.up)
+        
+        let image = imageView.image!
+        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+        let handlerImage = CIImage(image: imageView.image!)!
+        let handler = VNImageRequestHandler(ciImage:handlerImage, orientation:orientation)
 
         let request = VNDetectFaceLandmarksRequest(completionHandler: { (request, error) in
             DispatchQueue.main.async {
@@ -279,7 +288,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         //MARK: navigationBar's height
@@ -328,6 +337,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         initRightBarButtonItem(title:"")
     }
     
+    
+//    func updateClassifications(for image: UIImage) {
+//
+//        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+//        guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
+//
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
+//            do {
+//                try handler.perform([self.classificationRequest])
+//            } catch {
+//                /*
+//                 This handler catches general image processing errors. The `classificationRequest`'s
+//                 completion handler `processClassifications(_:error:)` catches errors specific
+//                 to processing that request.
+//                 */
+//                print("Failed to perform classification.\n\(error.localizedDescription)")
+//            }
+//        }
+//    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         let imageName = UUID().uuidString
@@ -338,6 +368,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //MARK:present picker,later you should dismiss
         dismiss(animated: true)
         self.imageView.image = UIImage(contentsOfFile: imagePath.path)
+        
+//        updateClassifications(for: image)
 
         //MARK:if imageView.image has image,then show the rightBarButtonItem
         if imageView.image !== nil {

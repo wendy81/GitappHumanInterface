@@ -1,0 +1,6 @@
+framework module Pods_Vison_PickerOriginalImage {
+  umbrella header "Pods-Vison+PickerOriginalImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

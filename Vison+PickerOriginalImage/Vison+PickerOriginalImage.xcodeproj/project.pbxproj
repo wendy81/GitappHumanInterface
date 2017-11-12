@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18189B0E1FA1E88800D4CACF /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189B0D1FA1E88800D4CACF /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		1885EEEC1FA077B200DEBAF8 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1885EEEB1FA0770500DEBAF8 /* PromiseKit.framework */; };
 		18C2035C1F921BD600F99FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2035B1F921BD600F99FB4 /* AppDelegate.swift */; };
 		18C2035E1F921BD600F99FB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2035D1F921BD600F99FB4 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18189B0D1FA1E88800D4CACF /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		1885EEEB1FA0770500DEBAF8 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C203581F921BD600F99FB4 /* Vison+PickerOriginalImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vison+PickerOriginalImage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C2035B1F921BD600F99FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				18C2035B1F921BD600F99FB4 /* AppDelegate.swift */,
 				18C2035D1F921BD600F99FB4 /* ViewController.swift */,
+				18189B0D1FA1E88800D4CACF /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				18C2035F1F921BD600F99FB4 /* Main.storyboard */,
 				18C203621F921BD600F99FB4 /* Assets.xcassets */,
 				18C203641F921BD600F99FB4 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C2035E1F921BD600F99FB4 /* ViewController.swift in Sources */,
+				18189B0E1FA1E88800D4CACF /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				18C2035C1F921BD600F99FB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
